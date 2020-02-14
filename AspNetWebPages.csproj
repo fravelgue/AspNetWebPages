@@ -100,15 +100,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="InitPages\_PageStart.cshtml" />
     <None Include="packages.config" />
     <Content Include="readme.md" />
     <Content Include="Pages\Default.cshtml" />
+    <Content Include="Pages\_PageStart.cshtml" />
+    <Content Include="Pages\Shared\_Layout.cshtml" />
+    <Content Include="Pages\PageUsingLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="_AppStart.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
