@@ -57,6 +57,8 @@ namespace AspNetWebPages
     {
         public static void MapWebPageRoute(this RouteCollection routeCollection, string routeUrl, string virtualPath, object defaultValues = null, object constraints = null, string routeName = null)
         {
+            if (bool.TryParse(System.Web.Configuration.WebConfigurationManager.AppSettings["webpages:Enabled"], out var webpagesEnabled) && !webpagesEnabled)
+                return;
             routeName = routeName ?? routeUrl;
 
             Route item = new Route(routeUrl, new RouteValueDictionary(defaultValues), new RouteValueDictionary(constraints), new WebPagesRouteHandler(virtualPath));
